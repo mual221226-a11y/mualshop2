@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>뮬샵 MUALSHOP — 대전 눈썹문신 전문</title>
+<title>뮬샵 MUALSHOP — 대전 눈썹 전문</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+KR:wght@200;300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -11,14 +11,14 @@
     --cream: #FBF8F3;
     --warm-beige: #F3EDE4;
     --soft-tan: #E8DED1;
-    --mocha: #A68B6B;
-    --deep-mocha: #7A6248;
+    --mocha: #8C7355;
+    --deep-mocha: #5E4830;
     --espresso: #4A3728;
     --rose-tint: #D4A89A;
     --gold-accent: #C9A96E;
-    --text-primary: #3B2E22;
-    --text-secondary: #7A6A5A;
-    --text-light: #A09080;
+    --text-primary: #2A1F15;
+    --text-secondary: #5A4A3A;
+    --text-light: #8A7A6A;
     --white: #FFFFFF;
     --kakao-yellow: #FEE500;
     --kakao-brown: #3C1E1E;
@@ -721,6 +721,22 @@
     background: rgba(166, 139, 107, 0.05);
   }
 
+  .mobile-menu-list a.mobile-menu-cta {
+    border-bottom: none;
+    margin: 24px 24px 0;
+    padding: 16px 0;
+    background: var(--espresso);
+    color: var(--cream);
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .mobile-menu-list a.mobile-menu-cta:active {
+    background: var(--deep-mocha);
+  }
+
   /* ========== RESPONSIVE - HERO ========== */
   @media (max-width: 1024px) {
     .hero-inner {
@@ -945,8 +961,6 @@
   /* Tab Content */
   .service-tab-content {
     display: none;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
     background: var(--cream);
     border-radius: 20px;
     overflow: hidden;
@@ -956,7 +970,7 @@
   }
 
   .service-tab-content.active {
-    display: grid;
+    display: block;
   }
 
   @keyframes tabFadeIn {
@@ -1090,8 +1104,7 @@
     .service-tabs { flex-wrap: wrap; gap: 0; }
     .service-tab { padding: 12px 20px; }
     .tab-name-en { font-size: 16px; }
-    .service-tab-content { grid-template-columns: 1fr; }
-    .tab-img { aspect-ratio: 16/9; }
+    .service-tab-content { border-radius: 16px; }
     .tab-body { padding: 32px 28px; }
     .lash-card { grid-template-columns: 1fr; }
     .lash-card .tab-img { min-height: 180px; }
@@ -2288,7 +2301,8 @@
     <nav class="nav-links">
       <a href="#services">기법설명</a>
       <a href="#process">작업과정</a>
-      <a href="#portfolio">시술사진</a>
+      <a href="#portfolio">전후사진</a>
+      <a href="#reviewSlider">후기</a>
       <a href="#contact" class="nav-cta">문의하기</a>
     </nav>
 
@@ -2307,7 +2321,7 @@
     <a href="#process" onclick="closeMobileMenu()">작업과정</a>
     <a href="#portfolio" onclick="closeMobileMenu()">전후사진</a>
     <a href="#reviewSlider" onclick="closeMobileMenu()">후기</a>
-    <a href="#contact" onclick="closeMobileMenu()">문의하기</a>
+    <a href="#contact" onclick="closeMobileMenu()" class="mobile-menu-cta">문의하기</a>
   </div>
 </div>
 
@@ -2321,10 +2335,6 @@
   <div class="hero-inner">
     <!-- Left: Text Content -->
     <div class="hero-content">
-      <div class="hero-badge">
-        <div class="badge-dot"></div>
-        <span>대전 눈썹문신 전문</span>
-      </div>
 
       <h1 class="hero-title">
         모든 피부타입에 맞는<br>
@@ -2404,10 +2414,9 @@
         <span>Services</span>
         <div class="section-label-line"></div>
       </div>
-      <h2 class="section-title">뮬샵의 시술 라인업</h2>
+      <h2 class="section-title">뮬샵의 기법 라인업</h2>
       <p class="section-desc">
-        얼굴형과 피부 상태를 정밀하게 분석한 후,<br>
-        가장 어울리는 기법으로 자연스러운 눈썹을 완성합니다
+        피부타입, 골격, 라이프스타일을 함께 고려한 1:1 맞춤 기법
       </p>
     </div>
 
@@ -2433,17 +2442,14 @@
 
     <!-- Tab Content 1: Embo -->
     <div class="service-tab-content active" id="tabContent0">
-      <div class="tab-img">
-        <div class="tab-img-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="4"/><circle cx="8.5" cy="8.5" r="2"/><path d="M22 15l-5-5L5 22"/></svg></div>
-        <div class="tab-img-label">시술 이미지</div>
-      </div>
+
       <div class="tab-body">
         <div class="tab-technique-label">TECHNIQUE 01</div>
         <div class="tab-technique-name">Natural</div>
         <div class="tab-technique-kr">자연눈썹</div>
         <div class="tab-divider"></div>
         <p class="tab-desc">
-          한 올 한 올 결을 따라 그려내어 마치 실제 눈썹처럼 자연스러운 느낌을 연출합니다. 과하지 않은 자연스러운 눈썹을 선호하는 분께 추천드립니다.
+          한 올 한 올 결을 따라 그려내어 마치 실제 눈썹처럼 <strong>자연스러운 느낌</strong>을 연출합니다. 과하지 않은 <strong>자연스러운 눈썹</strong>을 선호하는 분께 추천드립니다.
         </p>
         <div class="tab-info-grid">
           <div class="tab-info-item">
@@ -2464,17 +2470,14 @@
 
     <!-- Tab Content 2: Combo -->
     <div class="service-tab-content" id="tabContent1">
-      <div class="tab-img">
-        <div class="tab-img-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="4"/><circle cx="8.5" cy="8.5" r="2"/><path d="M22 15l-5-5L5 22"/></svg></div>
-        <div class="tab-img-label">시술 이미지</div>
-      </div>
+
       <div class="tab-body">
         <div class="tab-technique-label">TECHNIQUE 02</div>
         <div class="tab-technique-name">Combo</div>
         <div class="tab-technique-kr">콤보눈썹</div>
         <div class="tab-divider"></div>
         <p class="tab-desc">
-          자연스러운 결표현과 쉐도우(음영)를 결합한 기법입니다. 앞 머리결은 자연스럽게, 눈썹 뒤쪽은 또렷하게 표현해 두 기법의 장점을 동시에 누릴 수 있습니다.
+          자연스러운 결표현과 쉐도우(음영)를 결합한 기법입니다. 앞 머리결은 <strong>자연스럽게</strong>, 눈썹 뒤쪽은 <strong>또렷하게</strong> 표현해 <strong>두 기법의 장점</strong>을 동시에 누릴 수 있습니다.
         </p>
         <div class="tab-info-grid">
           <div class="tab-info-item">
@@ -2495,17 +2498,14 @@
 
     <!-- Tab Content 3: Shadow -->
     <div class="service-tab-content" id="tabContent2">
-      <div class="tab-img">
-        <div class="tab-img-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="4"/><circle cx="8.5" cy="8.5" r="2"/><path d="M22 15l-5-5L5 22"/></svg></div>
-        <div class="tab-img-label">시술 이미지</div>
-      </div>
+
       <div class="tab-body">
         <div class="tab-technique-label">TECHNIQUE 03</div>
         <div class="tab-technique-name">Shadow</div>
         <div class="tab-technique-kr">쉐도우눈썹</div>
         <div class="tab-divider"></div>
         <p class="tab-desc">
-          파우더 음영으로 눈썹을 채워 넣는 기법으로, 마치 메이크업을 한 듯한 선명하고 또렷한 눈썹을 만듭니다. 모공이 넓거나 유분이 많은 지성 피부에 유지력이 뛰어나며, 선명한 눈썹을 원하시는 분께 적합합니다.
+          파우더 음영으로 눈썹을 채워 넣는 기법으로, 마치 <strong>메이크업</strong>을 한 듯한 <strong>선명하고 또렷한 눈썹</strong>을 만듭니다. 모공이 넓거나 유분이 많은 지성 피부에 유지력이 뛰어나며, <strong>선명한 눈썹</strong>을 원하시는 분께 적합합니다.
         </p>
         <div class="tab-info-grid">
           <div class="tab-info-item">
@@ -2526,17 +2526,14 @@
 
     <!-- Tab Content 4: Hair Stroke -->
     <div class="service-tab-content" id="tabContent3">
-      <div class="tab-img">
-        <div class="tab-img-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="4"/><circle cx="8.5" cy="8.5" r="2"/><path d="M22 15l-5-5L5 22"/></svg></div>
-        <div class="tab-img-label">시술 이미지</div>
-      </div>
+
       <div class="tab-body">
         <div class="tab-technique-label">TECHNIQUE 04</div>
         <div class="tab-technique-name">Hair Stroke</div>
         <div class="tab-technique-kr">헤어스트록눈썹</div>
         <div class="tab-divider"></div>
         <p class="tab-desc">
-          눈썹 털 한 올 한 올을 정교하게 묘사하는 고난도 기법으로, 실제 눈썹과 구분이 어려울 만큼 극도로 자연스러운 표현이 가능합니다. 눈썹이 드물거나 탈모로 고민 중이신 분, 가장 자연스러운 결과를 원하시는 분께 추천드립니다.
+          눈썹 털 한 올 한 올을 정교하게 묘사하는 <strong>고난도 기법</strong>으로, 눈썹이 드물거나 <strong>탈모로 고민 중</strong>이신 분, 가장 <strong>자연스러운 결과</strong>를 원하시는 분께 추천드립니다.
         </p>
         <div class="tab-info-grid">
           <div class="tab-info-item">
@@ -2559,7 +2556,7 @@
     <div class="lash-card">
       <div class="tab-img">
         <div class="tab-img-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="4"/><circle cx="8.5" cy="8.5" r="2"/><path d="M22 15l-5-5L5 22"/></svg></div>
-        <div class="tab-img-label">시술 이미지</div>
+        <div class="tab-img-label">작업 이미지</div>
       </div>
       <div class="tab-body">
         <div class="tab-technique-label">ADDITIONAL</div>
@@ -2567,7 +2564,7 @@
         <div class="tab-technique-kr">속눈썹펌</div>
         <div class="tab-divider"></div>
         <p class="tab-desc">
-          눈썹 시술과 함께 받으시면 눈매 전체가 한층 또렷하게 완성됩니다. 자연스러운 컬링으로 마스카라 없이도 생기 있는 눈매를 만들어 드립니다. 눈썹 시술과 동시 진행 시 세트 할인 혜택이 있습니다.
+          눈썹 작업과 함께 받으시면 눈매 전체가 한층 또렷하게 완성됩니다. 자연스러운 컬링으로 마스카라 없이도 생기 있는 눈매를 만들어 드립니다. 눈썹 작업과 동시 진행 시 세트 할인 혜택이 있습니다.
         </p>
         <div class="tab-info-grid">
           <div class="tab-info-item">
@@ -2643,7 +2640,7 @@
           <div class="step-circle"><span class="step-num">03</span></div>
           <div class="step-content">
             <div class="step-name">추천 기법 결정</div>
-            <p class="step-desc">피부 타입과 상태를 직접 분석합니다. 엠보·콤보·쉐도우·헤어스트록 중 가장 적합한 기법을 제안드립니다.</p>
+            <p class="step-desc">피부 타입과 상태를 직접 분석합니다. 자연·콤보·쉐도우·헤어스트록 중 가장 적합한 기법을 제안드립니다.</p>
           </div>
         </div>
 
@@ -2652,7 +2649,7 @@
           <div class="step-circle"><span class="step-num">04</span></div>
           <div class="step-content">
             <div class="step-name">맞춤 디자인</div>
-            <p class="step-desc">얼굴형과 골격, 눈매를 직접 분석하여 가장 조화로운 눈썹 디자인을 완성한 뒤 시술을 진행합니다.</p>
+            <p class="step-desc">얼굴형과 골격, 눈매를 직접 분석하여 가장 조화로운 눈썹 디자인을 완성한 뒤 작업을 진행합니다.</p>
           </div>
         </div>
 
@@ -2661,7 +2658,7 @@
           <div class="step-circle"><span class="step-num">05</span></div>
           <div class="step-content">
             <div class="step-name">애프터케어</div>
-            <p class="step-desc">시술 후 관리법을 상세히 안내드리며, 리터치 안내까지 카카오로 케어해 드려요.</p>
+            <p class="step-desc">작업 후 관리법을 상세히 안내드리며, 리터치 안내까지 카카오로 케어해 드려요.</p>
           </div>
         </div>
 
@@ -2685,7 +2682,7 @@
       </div>
       <h2 class="section-title">직접 확인하세요<br>달라진 인상을</h2>
       <p class="section-desc">
-        화살표를 눌러 시술 사진을 확인해 보세요
+        화살표를 눌러 작업 사진을 확인해 보세요
       </p>
     </div>
 
@@ -2901,13 +2898,13 @@
         <button class="faq-question" onclick="toggleFaq(this.parentElement)">
           <div class="faq-q-left">
             <div class="faq-q-icon">Q</div>
-            <div class="faq-q-text">시술 후 일상생활이 바로 가능한가요?</div>
+            <div class="faq-q-text">일상생활이 바로 가능한가요?</div>
           </div>
           <div class="faq-toggle">+</div>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            네, 시술 직후부터 일상생활이 가능합니다. 다만 시술 당일은 세안 시 시술 부위에 물이 직접 닿지 않도록 주의해 주시고, 약 7~10일간 사우나·수영장·격한 운동은 피해 주시는 것이 좋습니다.
+            네, 직후부터 일상생활이 가능합니다. 다만 당일은 세안 시 작업 부위에 물이 직접 닿지 않도록 주의해 주시고, 약 7~10일간 사우나·수영장·격한 운동은 피해 주시는 것이 좋습니다.
           </div>
         </div>
       </div>
@@ -2916,13 +2913,13 @@
         <button class="faq-question" onclick="toggleFaq(this.parentElement)">
           <div class="faq-q-left">
             <div class="faq-q-icon">Q</div>
-            <div class="faq-q-text">시술이 많이 아픈가요?</div>
+            <div class="faq-q-text">많이 아픈가요?</div>
           </div>
           <div class="faq-toggle">+</div>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            시술 전 통증방지크림을 충분히 도포한 후 진행하기 때문에 대부분의 고객분들이 큰 통증 없이 편안하게 시술 받으십니다. 개인차가 있지만 "생각보다 안 아팠다"는 후기가 대부분입니다.
+            개인차가 있지만 "생각보다 안 아팠다"는 후기가 대부분입니다.
           </div>
         </div>
       </div>
@@ -2946,13 +2943,13 @@
         <button class="faq-question" onclick="toggleFaq(this.parentElement)">
           <div class="faq-q-left">
             <div class="faq-q-icon">Q</div>
-            <div class="faq-q-text">기존 잔흔(흉터, 이전 문신)이 있어도 시술이 가능한가요?</div>
+            <div class="faq-q-text">기존 흔적이 있어도 가능한가요?</div>
           </div>
           <div class="faq-toggle">+</div>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            네, 가능합니다. 기존 문신이나 흉터 위에도 커버업 시술이 가능하며, 상담 시 현재 상태를 직접 확인한 후 가장 적합한 방법을 안내해 드립니다.
+            네, 가능합니다. 기존 흔적 위에도 작업이 가능하며, 상담 시 현재 상태를 직접 확인한 후 가장 적합한 방법을 안내해 드립니다.
           </div>
         </div>
       </div>
@@ -2961,13 +2958,13 @@
         <button class="faq-question" onclick="toggleFaq(this.parentElement)">
           <div class="faq-q-left">
             <div class="faq-q-icon">Q</div>
-            <div class="faq-q-text">시술이 안 되는 경우도 있나요?</div>
+            <div class="faq-q-text">작업이 안 되는 경우도 있나요?</div>
           </div>
           <div class="faq-toggle">+</div>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            임산부, 수유 중이신 분, 켈로이드 체질, 피부 질환이 있는 부위 등의 경우에는 시술이 어려울 수 있습니다. 해당 사항이 있으시면 상담 시 미리 말씀해 주세요.
+            임산부, 수유 중이신 분, 켈로이드 체질, 피부 질환이 있는 부위 등의 경우에는 작업이 어려울 수 있습니다. 해당 사항이 있으시면 상담 시 미리 말씀해 주세요.
           </div>
         </div>
       </div>
